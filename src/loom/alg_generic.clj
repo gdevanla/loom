@@ -37,6 +37,7 @@
               (cons
                node
                (lazy-seq
+                ;;(println (count seen))
                 (let [nbrs (remove seen (successors node))]
                   (step (into (pop stack) nbrs)
                         (into seen nbrs)))))))]
